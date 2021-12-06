@@ -1,0 +1,13 @@
+.products {
+  background-color: rgba(0, 0, 0, 0.623);
+  padding: 2em;
+  border-radius: 16px;
+  margin: 0 0 1em 0;
+}
+
+.slick-list {
+    margin: 0 -7px;
+}
+.slick-slide>div {
+    padding: 0 7px;
+}

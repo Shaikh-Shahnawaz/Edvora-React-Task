@@ -1,0 +1,35 @@
+.main-container{
+    height: 100vh;
+}
+
+.filter{
+
+    background-color: rgba(0, 0, 0, 0.623);
+    /* padding: 1em 5em ; */
+    /* width: 50%; */
+    /* margin: 0.4em; */
+    border-radius: 15px;
+    margin-top: 2em;
+    padding: 2em;
+    
+}
+.filter select {
+    background-color: rgb(51, 51, 51);
+    margin-top: 15px;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 0 ;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.filter select option{
+    padding: 0 5em;
+}
+
+
+/* ==========Product Css========== */
+
+.edvora h1{
+    text-align: left;
+}
