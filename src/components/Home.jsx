@@ -74,7 +74,7 @@ function show(){
 
 
                 <div  className="  d-flex flex-column py-3 filter">
-                {/* <p className="text-light border-bottom border-2" >Filters</p> */}
+                
 
                        <label htmlFor="">Products</label> 
                     <select onChange={handleChange} name="Products" >

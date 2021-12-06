@@ -18,13 +18,40 @@ function Products({data,filtered,showProduct,productName}) {
 
 
 //   React Slick Settings
-    const settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4
-    };
+const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 910,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 510,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
     const product = data.map(ele=>ele.product_name)
 
@@ -50,7 +77,7 @@ function Products({data,filtered,showProduct,productName}) {
                                   
                                     <img style={{left: '270px', position: 'relative'}} height="70" width="70" src={ele.image} class="ms-2 border border-1 border-light rounded-3" alt="..." />
 
-                                    <p className="me-3 mt-2 text-end" > 
+                                    <p className="me-2 mt-2 text-end" > 
 
                                     <strong>{ele.address.city }</strong> <br />
                                     <strong>{ ele.address.state }</strong>
@@ -79,12 +106,12 @@ function Products({data,filtered,showProduct,productName}) {
 
                             <div className="card bg-dark ">
 
-                                <div style={{ marginTop: '10px' }}>
+                                <div className="text-end float-end mt-2 me-2" >
 
                                   
-                                    <img style={{left: '270px', position: 'relative'}} height="70" width="70" src={ele.image} class="ms-2 border border-1 border-light rounded-3" alt="..." />
+                                    <img  height="70" width="70" src={ele.image} class="ms-2 border border-1 border-light rounded-3 " />
 
-                                    <p className="me-3 mt-2 text-end" > 
+                                    <p className=" mt-2 " > 
 
                                     <strong>{ele.address.city }</strong> <br />
                                     <strong>{ ele.address.state }</strong>
@@ -94,7 +121,7 @@ function Products({data,filtered,showProduct,productName}) {
                                 
                                 </div>
 
-                                <div style={{ marginTop: '-140px' }} className=" text-start ps-2 ">
+                                <div style={{ marginTop: '10px' }} className=" text-start ps-2 ">
                                     <h5 class="card-title">{ele.product_name}</h5>
                                     <h6 class="card-title mb-2 text-muted">{ele.brand_name}</h6>
                                     <p class="card-text"> <strong>$ {ele.price}</strong> </p>
