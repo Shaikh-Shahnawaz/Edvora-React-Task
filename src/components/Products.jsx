@@ -72,32 +72,32 @@ const settings = {
 
                             <div className="card bg-dark ">
 
-                                <div style={{ marginTop: '10px' }}>
+                            <div className="text-end float-end mt-2 me-2" >
 
-                                  
-                                    <img style={{left: '270px', position: 'relative'}} height="70" width="70" src={ele.image} class="ms-2 border border-1 border-light rounded-3" alt="..." />
+                              
+                                <img  height="70" width="70" src={ele.image} class="ms-2 border border-1 border-light rounded-3 " />
 
-                                    <p className="me-2 mt-2 text-end" > 
+                                <p className=" mt-2 " > 
 
-                                    <strong>{ele.address.city }</strong> <br />
-                                    <strong>{ ele.address.state }</strong>
+                                <strong>{ele.address.city }</strong> <br />
+                                <strong>{ ele.address.state }</strong>
 
-                                    </p>
-                                   
+                                </p>
+                               
+                            
+                            </div>
+
+                            <div style={{ marginTop: '10px' }} className=" text-start ps-2 ">
+                                <h5 class="card-title">{ele.product_name}</h5>
+                                <h6 class="card-title mb-2 text-muted">{ele.brand_name}</h6>
+                                <p class="card-text"> <strong>$ {ele.price}</strong> </p>
+                                <p className="text-muted card-text" >Date: {ele.date.slice(0,10)}</p>
                                 
-                                </div>
+                                <p className="text-muted">Description: {ele.discription}</p>
 
-                                <div style={{ marginTop: '-140px' }} className=" text-start ps-2 ">
-                                    <h5 class="card-title">{ele.product_name}</h5>
-                                    <h6 class="card-title mb-2 text-muted">{ele.brand_name}</h6>
-                                    <p class="card-text"> <strong>$ {ele.price}</strong> </p>
-                                    <p className="text-muted card-text" >Date: {ele.date.slice(0,10)}</p>
-                                    
-                                    <p className="text-muted">Description: {ele.discription}</p>
+                            </div>
 
-                                </div>
-
-                            </div> 
+                        </div> 
 
                         ))
                         :
